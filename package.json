@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "db:migrate": "prisma migrate dev",
-    "db:studio": "prisma studio",
-    "seed": "ts-node -r tsconfig-paths/register scripts/seed-webhooks.ts"
+    "db:studio": "prisma studio"
   },
   "dependencies": {
     "next": "16.2.6",
@@ -26,8 +25,6 @@
     "eslint-config-next": "16.2.6",
     "prisma": "^5.18.0",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "ts-node": "^10.9.0",
-    "tsconfig-paths": "^4.2.0"
+    "typescript": "^5"
   }
 }

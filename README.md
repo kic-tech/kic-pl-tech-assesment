@@ -10,11 +10,11 @@ The core challenge is **identity resolution**: the same person appears different
 
 ## The Assessment
 
-### Part 1 — Architecture (~45 min)
+### Part 1 — Architecture (~1 hour)
 
 Fill in `ARCHITECTURE.md`. Your response should cover the data model, integration points, identity resolution strategy, failure modes, rollout approach, and a worked example of the "We Miss You" campaign use case described inside the file.
 
-### Part 2 — Build (~3 hours)
+### Part 2 — Build (~2–3 hours)
 
 Build a Next.js application in this repo. The folder structure and dependencies are provided. What you build, how you model the data, and the decisions you make are entirely up to you.
 
@@ -29,7 +29,6 @@ Mock payload shapes and resolution rules are in `AGENTS.md`.
 - Normalise signals before matching: lowercase + trim emails, E.164 phone numbers
 - Ensure duplicate webhook delivery does not create duplicate records — document how
 - Add a filter on the frontend to view only orders or only bookings
-- Add a seed script that exercises the identity merging edge cases
 - Record merge provenance: when two profiles are unified, store which signal triggered the merge and when, so it can be reviewed or reversed
 
 ---
@@ -47,6 +46,12 @@ npm run dev
 ## Submission
 
 Push to your own GitHub repo and share the link. Fill in `NOTES.md` with your assumptions, tradeoffs, and what you'd do differently with more time.
+
+---
+
+## AI Tools
+
+You are welcome to use AI tools (Claude, Codex, Cursor, Copilot, etc.). We care about the decisions you make and how you reason about the problem, not whether you typed every line yourself.
 
 ---
 

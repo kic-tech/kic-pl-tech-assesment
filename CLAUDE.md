@@ -27,4 +27,3 @@ This repo is a technical assessment for a Platform Lead role at KIC. It uses Nex
 - `src/app/api/` — Next.js API route handlers; keep them thin, delegate to `src/lib/`
 - `src/lib/` — Business logic, database queries, utilities, and the shared Prisma client instance
 - `src/types/` — Shared TypeScript interfaces and type definitions
-- `scripts/` — Standalone Node scripts (e.g. seeding); run via `ts-node`
