@@ -19,7 +19,7 @@ This repo is a technical assessment for a Platform Lead role at KIC. It uses Nex
 
 - **Framework**: Next.js 16 App Router
 - **Language**: TypeScript
-- **ORM**: Prisma with SQLite (dev) / Postgres (prod)
+- **ORM**: Prisma with SQLite (dev)
 - **Styling**: Tailwind CSS
 
 ## Folder Conventions
