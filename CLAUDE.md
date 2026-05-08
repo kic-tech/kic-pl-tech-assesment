@@ -10,7 +10,7 @@ This repo is a technical assessment for a Platform Lead role at KIC. It uses Nex
 2. Use the Prisma client from `src/lib/db.ts` — never instantiate it directly elsewhere
 3. Use Next.js App Router conventions — no pages directory
 4. Keep API route handlers thin — business logic belongs in `src/lib/`
-5. Do not modify `ARCHITECTURE.md`, `NOTES.md`, `README.md`, `CLAUDE.md`, or `AGENTS.md` unless explicitly asked
+5. Do not modify `README.md`, `CLAUDE.md`, or `AGENTS.md` unless explicitly asked
 6. When creating a migration, always use `npx prisma migrate dev --name <descriptive-name>`
 7. Do not install new dependencies without confirming with the candidate first
 8. Prefer explicit error handling over silent failures — return meaningful HTTP status codes
