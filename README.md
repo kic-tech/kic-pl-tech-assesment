@@ -36,10 +36,18 @@ Mock payload shapes and resolution rules are in `AGENTS.md`.
 ## Setup
 
 ```bash
+cp .env.example .env
 npm install
-npx prisma migrate dev --name init
 npm run dev
 ```
+
+The Prisma schema (`prisma/schema.prisma`) is intentionally empty — defining the data model is part of the exercise. Once you have your models, run:
+
+```bash
+npx prisma migrate dev --name <descriptive-name>
+```
+
+`prisma studio` (`npm run db:studio`) will only work after at least one model is defined and migrated.
 
 ---
 

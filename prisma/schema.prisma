@@ -7,4 +7,34 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// Define your models here
+model Customer {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  signals   IdentitySignal[]
+  events    Event[]
+}
+
+model IdentitySignal {
+  id         String   @id @default(cuid())
+  type       String   // e.g. "email", "phone", "device_id", "shopify_customer_id"
+  value      String
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id])
+  createdAt  DateTime @default(now())
+
+  @@unique([type, value])
+  @@index([value])
+}
+
+model Event {
+  id         String   @id @default(cuid())
+  source     String   // "shopify" | "mindbody"
+  type       String   // "order.created" | "booking.created"
+  externalId String   @unique
+  payload    String   // raw JSON
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id])
+  occurredAt DateTime
+  createdAt  DateTime @default(now())
+}
