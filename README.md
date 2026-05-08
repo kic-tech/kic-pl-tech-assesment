@@ -14,7 +14,7 @@ The core challenge is **identity resolution**: the same person appears different
 
 Fill in `ARCHITECTURE.md`. Your response should cover the data model, integration points, identity resolution strategy, failure modes, rollout approach, and a worked example of the "We Miss You" campaign use case described inside the file.
 
-### Part 2 — Build (~2–3 hours)
+### Part 2 — Build (~2–3 hours, use as a guide not a hard stop)
 
 Build a Next.js application in this repo. The folder structure and dependencies are provided. What you build, how you model the data, and the decisions you make are entirely up to you.
 
