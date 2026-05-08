@@ -107,3 +107,4 @@ Resolution rules:
 - The same real customer appears with different emails across Shopify and Mindbody — phone is the linking signal
 - A guest checkout carries no email or phone — device ID is the only available signal
 - A customer may have events from only one source and no overlapping signals with any other profile — they exist as an unlinked profile until a future event connects them
+- A single incoming event may carry signals that each match a *different* existing profile — for example, the email resolves to profile A but the phone resolves to profile B. How do you handle the conflict? Do you merge the two profiles? Which signal takes precedence? What do you record about why the merge happened so it can be reviewed or reversed?
