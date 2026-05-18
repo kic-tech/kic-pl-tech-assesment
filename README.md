@@ -47,7 +47,7 @@ The Prisma schema (`prisma/schema.prisma`) has a minimal starting point — exte
 npx prisma migrate dev --name <descriptive-name>
 ```
 
-`prisma studio` (`npm run db:studio`) will only work after at least one model is defined and migrated.
+`prisma studio` (`npm run db:studio`) is available once the database is migrated.
 
 ---
 
