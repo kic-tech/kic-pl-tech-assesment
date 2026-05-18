@@ -96,7 +96,7 @@ These are the signals available across the two systems in this exercise. Each si
 
 Resolution rules:
 - Any two events that share a deterministic signal value resolve to the same canonical customer.
-- A probabilistic signal (e.g. `device_id`) alone is sufficient for resolution in this exercise, but your data model should make the confidence level and triggering signal queryable.
+- A probabilistic signal (e.g. `device_id`) alone is sufficient for resolution in this exercise. Your data model should store the signal type and confidence level so matches can be reviewed.
 - When a new event resolves to an existing profile, all signals from the new event are added to that profile's signal set — which may trigger further cascading merges.
 
 ---
@@ -107,4 +107,4 @@ Resolution rules:
 - The same real customer appears with different emails across Shopify and Mindbody — phone is the linking signal
 - A guest checkout carries no email or phone — device ID is the only available signal
 - A customer may have events from only one source and no overlapping signals with any other profile — they exist as an unlinked profile until a future event connects them
-- A single incoming event may carry signals that each match a *different* existing profile — for example, the email resolves to profile A but the phone resolves to profile B. How do you handle the conflict? Do you merge the two profiles? Which signal takes precedence? What do you record about why the merge happened so it can be reviewed or reversed?
+- A single incoming event may carry signals that each match a *different* existing profile — for example, the email resolves to profile A but the phone resolves to profile B. The two profiles should be merged into one. Your data model should record which signal triggered the merge and when, so it can be reviewed or reversed.
