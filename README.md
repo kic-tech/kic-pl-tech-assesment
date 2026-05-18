@@ -41,7 +41,7 @@ npm install
 npm run dev
 ```
 
-The Prisma schema (`prisma/schema.prisma`) is intentionally empty — defining the data model is part of the exercise. Once you have your models, run:
+The Prisma schema (`prisma/schema.prisma`) has a minimal starting point — extending the data model is part of the exercise. Once you have your models, run:
 
 ```bash
 npx prisma migrate dev --name <descriptive-name>
