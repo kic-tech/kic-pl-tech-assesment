@@ -6,7 +6,7 @@ export default function Home() {
           KIC Platform Assessment
         </h1>
         <p className="mt-3 text-zinc-500 dark:text-zinc-400">
-          Build your internal tool frontend here. See <code className="text-sm font-mono bg-zinc-100 dark:bg-zinc-800 px-1 py-0.5 rounded">README.md</code> for the brief.
+          Build your internal tool frontend here. See <code className="text-sm font-mono bg-zinc-100 dark:bg-zinc-800 px-1 py-0.5 rounded">README.md</code> for the assessment details.
         </p>
       </div>
     </div>

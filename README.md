@@ -16,13 +16,18 @@ Fill in `ARCHITECTURE.md`. Your response should cover the data model, integratio
 
 ### Part 2 — Build (~2–3 hours, use as a guide not a hard stop)
 
-Build a Next.js application in this repo. The folder structure and dependencies are provided. What you build, how you model the data, and the decisions you make are entirely up to you.
+Build a Next.js application in this repo. The folder structure and dependencies are provided. How you model the data and the implementation decisions are entirely up to you.
 
-**The brief:** build a service that ingests webhook events from multiple sources (Shopify `order.created` and Mindbody `booking.created`), resolves each event to a canonical customer profile using whatever identity signals are present in the payload, stores the events, and exposes a simple internal-tool frontend where a KIC team member can look up a customer by any known signal (email, phone, device ID, or platform ID) and see their combined activity timeline.
+There are three things to build:
 
-Each webhook payload carries multiple identity signals — see `AGENTS.md` for payload shapes and the signal inventory. The payloads are intentionally designed so that the same real customer appears with different emails across systems, sometimes with no email at all, and can only be linked via overlapping signals (e.g. same phone number, or same device ID seen in two separate events).
+**1. Webhook ingestion.** Accept `POST` requests from Shopify (`order.created`) and Mindbody (`booking.created`). For each event, extract the identity signals in the payload and persist the event.
 
-Mock payload shapes and resolution rules are in `AGENTS.md`.
+**2. Identity resolution.** Resolve each incoming event to a canonical customer profile — creating one if none exists, or linking to an existing one via shared signals. The same real customer may appear with different emails across systems and can only be linked via overlapping signals (e.g. same phone number, or same device ID). See `CONTRACTS.md` for payload shapes, signal types, and resolution rules.
+
+**3. Internal-tool frontend.** Build a page where a KIC team member can:
+- Search for a customer by any known signal (email, phone, device ID, Shopify customer ID, or Mindbody client ID)
+- See the resolved customer profile and all their identity signals
+- See a combined activity timeline of every order and booking linked to that profile, sorted by date descending
 
 ### Bonus (optional)
 
